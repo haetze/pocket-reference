@@ -1,0 +1,158 @@
+#+TITLE: Reference
+#+DATE: 02 Sep 2021
+#+AUTHOR: Richard Stewing
+#+EMAIL: richard.stewing@udo.edu
+#+OPTIONS: toc:nil
+#+LATEX_HEADER: \usepackage[paperheight=20cm,paperwidth=10cm]{geometry}
+#+LATEX_CLASS_OPTIONS: [6pt]
+
+* Emacs
+
+** Generall 
+   - =emacs=: start emacs
+     - =-nw=: no window system
+   - =C-x C-c=: close emacs
+   - =C-z=: suspend emacs
+
+** Files
+   - =C-x C-f=: open file
+   - =C-x i=: insert file
+   - =C-x C-s=: save
+   - =C-x C-w=: write file (file name prompted)
+   - =C-x b=: switch buffer
+
+** Movement
+   - =C-l=: forward by char
+   - =C-b=: backward by char
+   - =C-n=: next line
+   - =C-p=: previous line
+   - =M-l/b=: foward/backward by word
+   - =C-a/e=: beginning/end of line
+   - =C/M-v=: page down/up
+   - =M-</>=: beginning/end of buffer
+
+** Repeating
+   - =M-n=: repeat command =n= times (eg. =M-8 C-p= moves 8 lines up)
+   - =C-u=: repate command 4 times
+   - =C-u C-u=: repate command 16 times
+   - =M-p= in Minibuffer: recall previous command
+
+** Editing
+   - =C-d=: delete char
+   - =DEL=: delete previous char
+   - =M-d=: kill word
+   - =M-DEL=: kill previous word
+   - =C-k=: kill rest of line
+   - =C-w=: kill region
+   - =M-w=: copy region
+   - =C-y=: paste from kill-ring
+     - =M-y=: cycle through kill-ring
+   - =C-t=: swap last 2 lettesr
+   - =M-t=: swap current and text word
+   - =C-x C-t=: swap last two lines
+   - =M-u/l=: Upcase/downcase word
+   - =M-c=: Capitalize word
+   - =C-_=: Undo
+     - =revert-buffer=: revert to last save state
+     - =C-x C-f ~filename RET C-x C-w filename RET=: revert to state at the beginning of editing session
+   - =M-s=: center line
+   - =M-S=: center paragraph
+   - =M-x center-region=
+   - =C-q=: quoted insert
+     - =C-q C-l=: is a page break, quoted insert + control sequence for a page break
+
+** Setting marks
+   - =C-SPACE=: set mark
+   - =C-x C-x=: swap mark and point
+
+** Search
+   They work with regular expressions.
+   - =C-s=: search forward
+   - =C-r=: search backward
+   - =M-e=: to edit search query directly
+
+** Buffers and Windows
+   - =C-x b=: switch buffer
+   - =C-x C-b=: buffer list
+     - =s=: save buffer
+     - =u=: unmark
+     - =1=: display fullscreen
+     - =2=: this and next buffer in horizontal split
+     - =%=: toggle read only status
+     - =d=: mark buffer for deletion
+     - =x=: execute
+   - =C-x s=: save some buffer
+   - =C-x k=: kill buffer
+   - =C-x 2/3=: vertical/horizontal split
+   - =C-x o=: other window
+   - =C-x 0=: delete window
+   - =C-x 1=: delete other window
+   - =UP/DOWN=: Enlarge/Shrink vertically
+   - =RIGHT/LEFT=: Enlarge/Shrink horizontally
+   - =M C-v=: Page down other window
+   - =C-x 4 f=: find file in other window
+
+** Bookmarks
+   - =C-x r m=: set bookmark
+   - =C-x r b=: jump to bookmark
+   - =bookmark-delete=: delete bookmark
+   - =C-x r l=: bockmark menu
+     - =d=: mark deletion
+     - =x=: execute deletion
+     - =r=: rename
+     - =s=: save bookmarks
+     - =f=: display bookmark
+     - =m=: mark for viewing
+     - =v=: view marked bookmarks
+     - =u=: remove mark
+     - =q=: exit
+
+  
+** Shell
+   - =M-x shell=: start shell
+
+** Dired
+   - =d=: mark for deletion
+   - =f=: open file/dir
+   - =g=: refresh
+   - =G=: change group premission
+   - =m=: marrk with *
+   - =o=: open in other window
+   - =C-o=: open in other window but don't move there
+   - =P=: Print
+   - =q=: quit
+   - =u=: unmark
+   - =x=: execute deletion
+   - =Z=: compress
+   - =M-DEL=: unmark all files
+   - =~/#=: mark backup/autosave files for deletion =C-u ~/#= undoes it
+   - ===: diff with marked
+   - =M-==: diff with backup
+   - =!= execute shell command on file
+
+** Gnus
+   - =M-x gnus=: open gnus
+   - =M-g=: refresh current group
+   - =g=: refresh
+   - =m=: new message
+   - =n=: next unread
+   - =c=: check all in current group
+   - =G R=: subscribe to rss
+   - Summary Buffer:
+     - =n=: next article
+     - =p=: previous article
+     - =C-o=: save in unix format
+     - =q=: back to group buffer
+     - =C-c C-f=: Forward article
+     - ===: expand summary window
+   - News Buffer:
+     - =S W=: Wide reply
+     - =S L=: Wide reply to mailing list
+     - =R=: Reply
+   - Message Buffer:
+     - =C-c C-f C-c=: Goto CC Field
+     - =C-c C-m s o=: Sign message with pgp
+     - =C-c C-m c o=: encrypt message with pgp
+     - =C= from summary buffer: cancel posting
+     - =C-c C-c=: post
+     - =C-c C-y=: insert original message   
